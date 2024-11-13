@@ -85,4 +85,296 @@ body {
 
 .cta-button:hover {
     transform: translateY(-3px);
+}
+
+/* Section À Propos */
+.apropos {
+    padding: 6rem 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.apropos h2, .projets h2, .contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--orange);
+}
+
+.apropos-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--blanc);
+}
+
+.competence-categorie {
+    margin-bottom: 2rem;
+}
+
+.competence-categorie h4 {
+    color: var(--orange);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.competence-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+}
+
+.competence-item {
+    background: rgba(255, 107, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.competence-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--orange);
+    background: rgba(255, 107, 0, 0.2);
+}
+
+.competence-item i {
+    font-size: 2rem;
+    color: var(--orange);
+    margin-bottom: 0.8rem;
+}
+
+.competence-item span {
+    display: block;
+    color: var(--blanc);
+    font-size: 0.9rem;
+}
+
+/* Section Projets */
+.projets {
+    padding: 6rem 2rem;
+    background-color: rgba(26, 26, 26, 0.95);
+}
+
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding: 1rem;
+}
+
+.projet-card {
+    background: var(--noir);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 107, 0, 0.1);
+}
+
+.projet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 107, 0, 0.2);
+    border-color: var(--orange);
+}
+
+.projet-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.projet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.projet-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 26, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projet-card:hover .projet-overlay {
+    opacity: 1;
+}
+
+.projet-card:hover .projet-image img {
+    transform: scale(1.1);
+}
+
+.projet-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.projet-btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--orange);
+    color: var(--blanc);
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.projet-btn:hover {
+    background: var(--blanc);
+    color: var(--orange);
+}
+
+.projet-info {
+    padding: 1.5rem;
+}
+
+.projet-info h3 {
+    color: var(--orange);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.projet-info p {
+    color: var(--blanc);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.projet-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tech-tag {
+    background: rgba(255, 107, 0, 0.1);
+    color: var(--orange);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid var(--orange);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: var(--orange);
+    color: var(--blanc);
+}
+
+/* Animation au survol */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projets-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projet-image {
+        height: 200px;
+    }
+
+    .projet-links {
+        flex-direction: column;
+    }
+}
+
+/* Section Contact */
+.contact {
+    padding: 6rem 2rem;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    color: var(--blanc);
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--noir);
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--blanc);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--orange);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none; /* Pour une version mobile, nous ajouterons un menu hamburger */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .apropos, .projets, .contact {
+        padding: 4rem 1rem;
+    }
+
+    .competence-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .apropos-text p {
+        font-size: 1rem;
+        text-align: justify;
+    }
 } 
